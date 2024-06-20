@@ -1,3 +1,82 @@
-h1 {
-    color: blue;
+.genplan-page {
+    background: url('assets/img/genplan.png') 0/cover no-repeat;
+    position: relative;
+    z-index: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $color-bg;
+        z-index: -1;
+    }
+    & .container {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.buld {
+    height: calc(100vh - 241px);
+    & .build_item {
+        fill: #d4ff92bd;
+        stroke: #008000;
+        stroke-width: 5px;
+        fill-opacity: 0;
+        stroke-opacity: 0;
+        transition: .2s;
+        cursor: pointer;
+        &.sold {
+            fill: #ff9292bd;
+            stroke: #800000;
+            &:hover {
+                cursor: no-drop;
+            }
+        }
+        &:hover {
+            fill-opacity: 0.7;
+            stroke-opacity: 1;
+        }
+    }
+}
+
+.information_container {
+    background-color: $color-primary-opasity;
+    width: 100vw;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+}
+
+.information {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $text-color;
+    max-width: 1350px;
+    margin: 0 auto;
+    & h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    & .information_list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        & .list_item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 20px;
+            & span {
+                text-align: right;
+                font-size: 18px;
+            }
+        }
+    }
 }

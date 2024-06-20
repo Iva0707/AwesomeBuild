@@ -1,8 +1,55 @@
-header{
-	height: 7vh;
-	padding: 15px 0;
-	background: #222;
-	a {
-		color: #fff;
-	}
+header {
+    padding: 15px 0px;
+    background: $color-primary;
+    a {
+        color: $text-color;
+        text-decoration: none;
+        cursor: pointer;
+        // letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .container {
+        display: flex;
+    }
+    .header_navigation {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        gap: 50px;
+        margin: 0 100px;
+        & a {
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                background: $hover-link;
+                width: 0px;
+                height: 2px;
+                bottom: -5px;
+                transform: translate(0, -50%);
+            }
+            &:before {
+                right: 50%;
+            }
+            &:after {
+                left: 50%;
+            }
+            &:hover {
+                color: #ffffe4;
+                transition: .2s;
+            }
+            &:hover:before,
+            &:hover:after {
+                width: 50%;
+                transition: .2s;
+            }
+        }
+    }
+    .logo {
+        display: inline-block;
+        max-width: 170px;
+    }
 }
