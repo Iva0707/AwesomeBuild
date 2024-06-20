@@ -9,6 +9,23 @@ img {
     height: auto;
 }
 
+a {
+    color: $text-color;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: $link-accent;
+        transition: .2s;
+    }
+}
+
+ul,
+ol {
+    & li {
+        list-style: none;
+    }
+}
+
 .container {
     max-width: 1350px;
     padding: 0 12px;

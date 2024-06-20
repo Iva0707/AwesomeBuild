@@ -1,15 +1,16 @@
 .genplan-page {
-    background: url('assets/img/genplan.png') 0/cover no-repeat;
+    font-family: $main-font;
     position: relative;
     z-index: 0;
+    background: url('assets/img/genplan.png') 0/cover no-repeat;
     &:after {
         content: '';
         position: absolute;
+        background-color: $color-primary-light;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background: $color-bg;
         z-index: -1;
     }
     & .container {
@@ -20,7 +21,7 @@
 }
 
 .buld {
-    height: calc(100vh - 241px);
+    height: calc(100vh - 221px);
     & .build_item {
         fill: #d4ff92bd;
         stroke: #008000;
@@ -44,38 +45,39 @@
 }
 
 .information_container {
-    background-color: $color-primary-opasity;
+    background-color: $color-primary-light;
     width: 100vw;
     align-self: center;
     padding: 0;
     margin: 0;
-}
-
-.information {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    color: $text-color;
-    max-width: 1350px;
-    margin: 0 auto;
-    & h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-    & .information_list {
-        list-style: none;
+    border-top: 1px solid $text-color;
+    & .information {
+        padding: 24px;
         display: flex;
-        justify-content: space-between;
-        text-align: center;
-        & .list_item {
+        flex-direction: column;
+        gap: 14px;
+        color: $text-color;
+        max-width: 1350px;
+        margin: 0 auto;
+        & h2 {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 600;
+        }
+        & .information_list {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 20px;
-            & span {
-                text-align: right;
-                font-size: 18px;
+            justify-content: space-between;
+            text-align: center;
+            & .list_item {
+                flex-direction: column;
+                gap: 10px;
+                font-size: 20px;
+                & span {
+                    text-align: right;
+                    font-size: 18px;
+                    color: $hover-link;
+                    font-weight: 700;
+                }
             }
         }
     }
