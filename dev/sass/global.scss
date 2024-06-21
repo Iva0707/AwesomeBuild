@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+::selection {
+    background-color: $hover-link;
+    color: $color-primary;
+}
+
 html {
     overflow-x: hidden;
 }
