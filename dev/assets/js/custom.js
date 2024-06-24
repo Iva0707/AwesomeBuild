@@ -19,6 +19,35 @@ showInformation(cellFlatsFree, 'data-flats-free')
 showInformation(cellFlatsBooked, 'data-flats-booked')
 showInformation(cellFlatsSold, 'data-flats-sold')
 
+const calcInformation =()=> buildItem.forEach(item => {
+
+    let flats = Number (item.getAttribute('data-flats'))
+    let flatsBooked = Number (item.getAttribute('data-flats-booked'))
+    let flatsSold = Number (item.getAttribute('data-flats-sold'))
+    
+    let flatsFree = flats - (flatsBooked + flatsSold)
+    
+    item.setAttribute('data-flats-free', flatsFree)
+
+    const dataFlatsFree = item.getAttribute('data-flats-free')
+    dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
+})
+
+calcInformation()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

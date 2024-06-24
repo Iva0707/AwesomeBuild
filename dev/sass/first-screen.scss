@@ -33,8 +33,12 @@
         &.sold {
             fill: #ff9292bd;
             stroke: #800000;
+            fill-opacity: 0.7;
+            stroke-opacity: 1;
+            cursor: no-drop;
             &:hover {
-                cursor: no-drop;
+                fill-opacity: 1;
+
             }
         }
         &:hover {
