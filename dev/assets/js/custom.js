@@ -31,24 +31,16 @@ const calcInformation =()=> buildItem.forEach(item => {
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
     dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
+
+    if (item.classList.contains('sold')) {
+        item.addEventListener('click', function(notActive) {
+            notActive.preventDefault();
+        });
+    }
+
 })
 
 calcInformation()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
