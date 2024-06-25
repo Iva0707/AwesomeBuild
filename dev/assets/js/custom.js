@@ -30,19 +30,20 @@ const calcInformation =()=> buildItem.forEach(item => {
     item.setAttribute('data-flats-free', flatsFree)
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
-    dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
+    // dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
 
-    if (item.classList.contains('sold')) {
-        item.addEventListener('click', function(notActive) {
-            notActive.preventDefault();
-        });
+    function noLink (event) {
+        event.preventDefault();
     }
-
-})
+    
+    if (dataFlatsFree === "0") {
+        item.classList.add('sold');
+        item.addEventListener('click', noLink);
+    }
+    
+});
 
 calcInformation()
-
-
 
 
 // const showNumber =(a, b, c)=> {  /* создаем аргументы */
