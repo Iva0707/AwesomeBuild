@@ -26,21 +26,17 @@ const calcInformation =()=> buildItem.forEach(item => {
     let flatsSold = Number (item.getAttribute('data-flats-sold'))
     
     let flatsFree = flats - (flatsBooked + flatsSold)
-    
     item.setAttribute('data-flats-free', flatsFree)
 
     const dataFlatsFree = item.getAttribute('data-flats-free')
-    // dataFlatsFree === "0" ? item.classList.add('sold') : undefined;
-
-    function noLink (event) {
-        event.preventDefault();
-    }
     
     if (dataFlatsFree === "0") {
         item.classList.add('sold');
-        item.addEventListener('click', noLink);
+        item.setAttribute('data-modal', 'sold')
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+        })
     }
-    
 });
 
 calcInformation()
