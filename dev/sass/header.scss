@@ -7,6 +7,7 @@ header {
     font-family: $accent-font;
     .container {
         display: flex;
+        align-items: center;
     }
     .logo {
         display: inline-block;
@@ -42,6 +43,22 @@ header {
             &:hover:after {
                 width: 50%;
                 transition: .2s;
+            }
+        }
+    }
+    .btn_row {
+        width: 381px;
+        margin: auto 0px;
+    }
+    .btn {
+        &.modal_btn {
+            border: 1px solid $text-color;
+            padding: 12px 20px;
+            &:hover {
+                transform: scale(1.03);
+                font-size: 18px;
+                background-color: $hover-link;
+                border: 1px solid $hover-link;
             }
         }
     }

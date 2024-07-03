@@ -32,10 +32,10 @@ const calcInformation =()=> buildItem.forEach(item => {
     
     if (dataFlatsFree === "0") {
         item.classList.add('sold');
-        item.setAttribute('data-modal', 'sold')
         item.addEventListener('click', (event) => {
             event.preventDefault();
         })
+        item.setAttribute('data-triger-modal', 'sold')
     }
 });
 
