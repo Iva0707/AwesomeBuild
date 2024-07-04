@@ -16,7 +16,7 @@ const modalArr = [
     {
         id:'question',
         title:'Залишилися питання?',
-        description:'Заповніть форму та задайте ваші питання',
+        description:'Заповніть форму та напишіть, що саме вас цікавить',
         markup: `<form>
                     <div class="input_row">
                         <label for="name">Імʼя</label>
