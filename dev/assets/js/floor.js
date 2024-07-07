@@ -6,7 +6,7 @@ const flatArr = [
         square: '82,3м²',
         price: '1500$',
         priceTotal: '123,450$',
-        status: 'Вільно',
+        status: 'Бронь',
     },
     {
         id: 1,
@@ -78,7 +78,7 @@ const flatArr = [
         square: '79,3м²',
         price: '1500$',
         priceTotal: '118,950$',
-        status: 'Продано',
+        status: 'sold',
     },
 ]
 
@@ -128,7 +128,6 @@ const installFloor =()=> {
             )
             flatInfo.innerHTML = flatInformation //Меняем текст в инфо в разметке
         }
-
         renderInformation(initialVallue) //Вкладываем первую квартиру в аргумент функции
 
         flats.forEach(flat => { //Обращаемся к каждой квартире
@@ -139,8 +138,8 @@ const installFloor =()=> {
                     const thisFlat = flat.getAttribute('data-flat-number') //Получаем айди квартиры по которой был клик
                     const flatNumber = flatArr.filter (item => item.flatNumber === thisFlat)
                     renderInformation(flatNumber) //Вкладываем квартиру по которой был клик в аргумент функции
-            })
-
+                })
+                
             if (flat.classList.contains('action')) {
                 flat.querySelector('.flat_status').innerHTML = `Акція`
             } else if (flat.classList.contains('booked')) {
@@ -151,6 +150,7 @@ const installFloor =()=> {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
         })
+
 
 }
 
