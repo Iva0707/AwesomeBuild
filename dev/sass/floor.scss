@@ -1,0 +1,64 @@
+.page-floor {
+    font-family: $main-font;
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: rgba(24, 38, 40, 0.8);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.floor {
+    height: calc(100vh - 231px);
+    display: flex;
+    justify-content: center;
+}
+
+.flat_stroke {
+    stroke: #05FF00;
+    stroke-width: 2px;
+    fill: #04ff006d;
+}
+
+.status_overlay {
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 2px;
+}
+
+.number_overlay {
+    fill: #80D34E;
+    stroke: #000000;
+    stroke-width: 2px;
+}
+
+.cell_flat_number,
+.cell_flat_status {
+    fill: #000000;
+    font-weight: 700; 
+}
+
+
+
+
+
+
+.floor_options {
+    @extend .information_list
+}
+
+.floor_option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+    & div:last-child {
+        font-size: 18px;
+        color: $hover-link;
+        font-weight: 700;
+    }
+}

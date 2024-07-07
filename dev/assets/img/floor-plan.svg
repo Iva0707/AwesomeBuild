@@ -1,0 +1,104 @@
+<svg width="1731" height="612" viewBox="0 0 1731 612" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="floor-plan">
+<rect id="Rectangle 398" width="1731" height="612" fill="#D9D9D9"/>
+<g id="1">
+<path id="plan-1" d="M157 80H44L44.5 480.5H151.5V297H157V311.5H351V299.5H358V277H351V121H157V80Z" stroke="#05FF00"/>
+<g id="status">
+<path id="Rectangle 396" d="M337 270H215V305H337V270Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375">
+<path id="Rectangle 397" d="M248 270H215V305H248V270Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="228" y="293.318">1                         </tspan></text>
+</g>
+<text id="Action" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="257" y="293.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="2">
+<path id="plan-2" d="M379 316.5H156.5V480.5H243.5V546.5H455.5L454 316.5H404.5V311.5H379V316.5Z" stroke="#05FF00"/>
+<g id="status_2">
+<path id="Rectangle 396_2" d="M447 325H325V360H447V325Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_2">
+<path id="Rectangle 397_2" d="M358 325H325V360H358V325Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="336" y="348.318">2                         </tspan></text>
+</g>
+<text id="Action_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="367" y="348.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="3">
+<path id="plan-3" d="M510.5 316.5H458.5V547H670.5V480.5H757.5V316.5H662.5V330H656.5V316.5H562.5V327.5H556.5V316.5H532.5V311.5H510.5V316.5Z" stroke="#05FF00"/>
+<g id="status_3">
+<path id="Rectangle 396_3" d="M749 325H627V360H749V325Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_3">
+<path id="Rectangle 397_3" d="M660 325H627V360H660V325Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="638" y="348.318">3                         </tspan></text>
+</g>
+<text id="Action_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="669" y="348.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="4">
+<path id="plan-4" d="M562.5 276.5H556.5V299.5L562.5 300.5V311.5H762L762.5 480.5L858.5 481V80.5H757.5V121.5H562.5V276.5Z" stroke="#05FF00"/>
+<g id="status_4">
+<path id="Rectangle 396_4" d="M695 136H573V171H695V136Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_4">
+<path id="Rectangle 397_4" d="M606 136H573V171H606V136Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_5" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="584" y="159.318">4                         </tspan></text>
+</g>
+<text id="Action_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="615" y="159.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="5">
+<path id="plan-5" d="M868 481L868.5 80.5H969.5V121.5H1164.5V259.5H1131.5L1132 272.5V297H1125.5V311.5H964.5L965 480.5L868 481Z" stroke="#05FF00"/>
+<g id="status_5">
+<path id="Rectangle 396_5" d="M1161 126H1039V161H1161V126Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_5">
+<path id="Rectangle 397_5" d="M1072 126H1039V161H1072V126Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="5_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1050" y="149.318">5                         </tspan></text>
+</g>
+<text id="Action_5" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1081" y="149.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="6">
+<path id="plan-6" d="M969.5 481V316.5H1164.5V546.5H1057.5V481H969.5Z" stroke="#05FF00"/>
+<g id="status_6">
+<path id="Rectangle 396_6" d="M1161 325H1039V360H1161V325Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_6">
+<path id="Rectangle 397_6" d="M1072 325H1039V360H1072V325Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="6_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1050" y="348.318">6                         </tspan></text>
+</g>
+<text id="Action_6" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1081" y="348.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="7">
+<path id="plan-7" d="M1369.5 546.5H1170.5V316.5H1323.5V310.5H1346.5V316.5H1369.5V546.5Z" stroke="#05FF00"/>
+<g id="status_7">
+<path id="Rectangle 396_7" d="M1362 325H1240V360H1362V325Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_7">
+<path id="Rectangle 397_7" d="M1273 325H1240V360H1273V325Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="8" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1252" y="348.318">7</tspan></text>
+</g>
+<text id="Action_7" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1282" y="348.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="8_2">
+<path id="plan-8" d="M1482.5 546.5H1375.5V316.5H1385.5V311.5H1407.5V316.5H1570.5V480.5H1482.5V546.5Z" stroke="#05FF00"/>
+<g id="status_8">
+<path id="Rectangle 396_8" d="M1567 324H1445V359H1567V324Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_8">
+<path id="Rectangle 397_8" d="M1478 324H1445V359H1478V324Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_6" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1456" y="347.318">8                         </tspan></text>
+</g>
+<text id="Action_8" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1487" y="347.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;                     </tspan></text>
+</g>
+</g>
+<g id="9">
+<path id="plan-9" d="M1414.5 296.5V311.5H1570.5V296.5H1575.5V480.5H1681.5V80H1570.5V121.5H1375.5V268.5H1408.5V296.5H1414.5Z" stroke="#05FF00"/>
+<g id="status_9">
+<path id="Rectangle 396_9" d="M1506 139H1384V174H1506V139Z" fill="white" stroke="black" stroke-width="2"/>
+<g id="Group 375_9">
+<path id="Rectangle 397_9" d="M1417 139H1384V174H1417V139Z" fill="#80D34E" stroke="black" stroke-width="2"/>
+<text id="1_7" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1395" y="162.318">9                       </tspan></text>
+</g>
+<text id="Action_9" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1426" y="162.318">&#x410;&#x43a;&#x446;&#x438;&#x44f;</tspan></text>
+</g>
+</g>
+</g>
+</svg>
