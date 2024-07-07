@@ -23,16 +23,16 @@
 .buld {
     height: calc(100vh - 230px);
     & .build_item {
-        fill: #d4ff92bd;
-        stroke: #008000;
+        fill: $fill-green;
+        stroke: $stroke-green;
         stroke-width: 5px;
         fill-opacity: 0;
         stroke-opacity: 0;
         transition: .2s;
         cursor: pointer;
         &.sold {
-            fill: #ff9292bd;
-            stroke: #800000;
+            fill: $fill-red;
+            stroke: $stroke-red;
             fill-opacity: 0.7;
             stroke-opacity: 1;
             cursor: no-drop;
