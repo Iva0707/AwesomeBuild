@@ -134,12 +134,17 @@ const installFloor =()=> {
             flat.addEventListener('click', () => { //Устанавливаем слушатель событий
                 removeActiveClass()
                 flat.classList.add('active') //По клику добавляем активный класс
+                flat.addEventListener('click', ()=> {
+                    window.location.href = 'flat-item.html'
+                })
     
                     const thisFlat = flat.getAttribute('data-flat-number') //Получаем айди квартиры по которой был клик
                     const flatNumber = flatArr.filter (item => item.flatNumber === thisFlat)
+
                     renderInformation(flatNumber) //Вкладываем квартиру по которой был клик в аргумент функции
+
                 })
-                
+
             if (flat.classList.contains('action')) {
                 flat.querySelector('.flat_status').innerHTML = `Акція`
             } else if (flat.classList.contains('booked')) {
@@ -150,6 +155,23 @@ const installFloor =()=> {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
         })
+
+        // const renderStatus =(array) => {
+        //     const flatStatus = array.map(item => {
+        //         return (`${item.status}`
+        //         )}
+        //     )
+
+        //     flats.forEach (flat => {
+        //         console.log(flat);
+        //         if (flatStatus === "status: 'Бронь'") {
+        //             console.log('test')
+        //         }
+        //     })
+        // }    
+
+        // renderStatus([flatArr[0]])
+        
 }
 
 document.querySelector('.page-floor') ? installFloor() : null; //Включаем функцию только для page-floor

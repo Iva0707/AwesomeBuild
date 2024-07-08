@@ -47,6 +47,10 @@
     opacity: 0;
     transition: .2s;
     cursor: pointer;
+    .sold & {
+        fill: $fill-red;
+        stroke: $stroke-red;
+    }
     &:hover {
         stroke-width: 4px;
         opacity: 0.5;
@@ -65,11 +69,6 @@
     fill: $color-black;
     font-weight: 700; 
 }
-
-
-
-
-
 
 .floor_options {
     @extend .information_list;
