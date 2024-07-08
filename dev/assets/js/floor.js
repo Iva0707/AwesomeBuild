@@ -150,8 +150,6 @@ const installFloor =()=> {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
         })
-
-
 }
 
 document.querySelector('.page-floor') ? installFloor() : null; //Включаем функцию только для page-floor

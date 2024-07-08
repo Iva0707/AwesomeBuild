@@ -1,0 +1,58 @@
+.page-build {
+    font-family: $main-font;
+    position: relative;
+    z-index: 0;
+    background: url('assets/img/build.png') center center/cover no-repeat;
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $color-primary-light;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    & .build {
+        display: flex;
+        justify-content: center;
+        & .build_img {
+            height: calc(100vh - 230px);
+            & .buid_path {
+                fill: $fill-green;
+                stroke: $stroke-green;
+                stroke-width: 4px;
+                fill-opacity: 0;
+                stroke-opacity: 0;
+                transition: .2s;
+                cursor: pointer;
+                &.sold {
+                    fill: $fill-red;
+                    stroke: $stroke-red;
+                    fill-opacity: 0.7;
+                    stroke-opacity: 1;
+                    cursor: no-drop;
+                    &:hover {
+                        fill-opacity: 1;
+                    }
+                }
+                &:hover {
+                    fill-opacity: 0.7;
+                    stroke-opacity: 1;
+                }
+            }
+        }
+    }
+    & .information_container  {
+        & .information {
+            & .information_list {
+                & .list_item {
+                    min-width: 208px;
+                }
+            }
+        }
+    }
+}
+
+
