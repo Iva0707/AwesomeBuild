@@ -60,7 +60,7 @@ const flatArr = [
         square: '42м²',
         price: '1500$',
         priceTotal: '63,000$',
-        status: 'Вільно',
+        status: 'Продано',
     },
     {
         id: 7,
@@ -78,7 +78,7 @@ const flatArr = [
         square: '79,3м²',
         price: '1500$',
         priceTotal: '118,950$',
-        status: 'sold',
+        status: 'Вільно',
     },
 ]
 
@@ -132,14 +132,17 @@ const installFloor =()=> {
 
         flats.forEach(flat => { //Обращаемся к каждой квартире
             flat.addEventListener('click', () => { //Устанавливаем слушатель событий
+                if (flat.classList.contains('active') && !flat.classList.contains('sold')) {
+                    window.location.href = 'flat-item.html'
+                }
                 removeActiveClass()
+
                 flat.classList.add('active') //По клику добавляем активный класс
     
                     const thisFlat = flat.getAttribute('data-flat-number') //Получаем айди квартиры по которой был клик
                     const flatNumber = flatArr.filter (item => item.flatNumber === thisFlat)
 
                     renderInformation(flatNumber) //Вкладываем квартиру по которой был клик в аргумент функции
-
                 })
 
                 const setFlatStatus =()=> flatArr.find(item => {
@@ -151,23 +154,6 @@ const installFloor =()=> {
 
                 setFlatStatus();
 
-            // const renderStatus =(array) => {
-            //     const flatStatus = array.map(item => {
-            //         return (`${item.status}`
-            //         )}
-            //     )
-
-            //     flats.forEach (flat => {
-            //         console.log(flat);
-            //         if (flatStatus === "status: 'Бронь'") {
-            //             console.log('test')
-            //         }
-            //     })
-            // }    
-
-            // renderStatus([flatArr[0]])
-
-
             if (flat.classList.contains('action')) {
                 flat.querySelector('.flat_status').innerHTML = `Акція`
             } else if (flat.classList.contains('booked')) {
@@ -178,18 +164,6 @@ const installFloor =()=> {
             } else {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
-        })
-
-        const flatPage = document.querySelectorAll('.flat')
-
-        flatPage.forEach(item => {
-            item.addEventListener('click', () => {
-                if (item.classList.contains('active') && !item.classList.contains('sold')) {
-                    item.addEventListener('click', () => {
-                        window.location.href = 'flat-item.html'
-                    })
-                }
-            })
         })
         
 }

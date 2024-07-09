@@ -74,7 +74,6 @@ function renderModalContent (modalData) {
 
     }
     const modalClose = document.querySelectorAll("[data-modal='close']")
-    console.log(modalClose);
 
     modalClose.forEach(close => {
         close.addEventListener('click', closeModal)
