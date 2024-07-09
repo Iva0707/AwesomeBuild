@@ -134,9 +134,6 @@ const installFloor =()=> {
             flat.addEventListener('click', () => { //Устанавливаем слушатель событий
                 removeActiveClass()
                 flat.classList.add('active') //По клику добавляем активный класс
-                flat.addEventListener('click', ()=> {
-                    window.location.href = 'flat-item.html'
-                })
     
                     const thisFlat = flat.getAttribute('data-flat-number') //Получаем айди квартиры по которой был клик
                     const flatNumber = flatArr.filter (item => item.flatNumber === thisFlat)
@@ -144,6 +141,32 @@ const installFloor =()=> {
                     renderInformation(flatNumber) //Вкладываем квартиру по которой был клик в аргумент функции
 
                 })
+
+                const setFlatStatus =()=> flatArr.find(item => {
+                    const thisFlat = flat.getAttribute('data-flat-number')
+                    if (item.flatNumber === Number(thisFlat)) {
+                        flat.classList.add(item.status)
+                    }
+                });
+
+                setFlatStatus();
+
+            // const renderStatus =(array) => {
+            //     const flatStatus = array.map(item => {
+            //         return (`${item.status}`
+            //         )}
+            //     )
+
+            //     flats.forEach (flat => {
+            //         console.log(flat);
+            //         if (flatStatus === "status: 'Бронь'") {
+            //             console.log('test')
+            //         }
+            //     })
+            // }    
+
+            // renderStatus([flatArr[0]])
+
 
             if (flat.classList.contains('action')) {
                 flat.querySelector('.flat_status').innerHTML = `Акція`
@@ -156,21 +179,17 @@ const installFloor =()=> {
             } //Добавляем условие смены статуса при наличии определенного класса
         })
 
-        // const renderStatus =(array) => {
-        //     const flatStatus = array.map(item => {
-        //         return (`${item.status}`
-        //         )}
-        //     )
+        const flatPage = document.querySelectorAll('.flat')
 
-        //     flats.forEach (flat => {
-        //         console.log(flat);
-        //         if (flatStatus === "status: 'Бронь'") {
-        //             console.log('test')
-        //         }
-        //     })
-        // }    
-
-        // renderStatus([flatArr[0]])
+        flatPage.forEach(item => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('active') && !item.classList.contains('sold')) {
+                    item.addEventListener('click', () => {
+                        window.location.href = 'flat-item.html'
+                    })
+                }
+            })
+        })
         
 }
 

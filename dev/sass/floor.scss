@@ -57,6 +57,12 @@
     }
 }
 
+.active.sold { 
+    & .flat_stroke {
+        cursor: no-drop;
+    }
+}
+
 .status_overlay {
     fill: #ffffff;
     stroke: $color-black;
