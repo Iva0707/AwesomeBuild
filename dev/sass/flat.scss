@@ -2,7 +2,6 @@
     font-family: $main-font;
     position: relative;
     z-index: 0;
-    // background: url('assets/img/genplan.png') center center/cover no-repeat;
     &:after {
         content: '';
         position: absolute;
@@ -29,5 +28,13 @@
             }
         }
     }
+}
+
+.flat_item {
+    fill: $fill-green;
+    fill-opacity: 0.1;
+    stroke: $text-color;
+    stroke-width: 4px;
+    cursor: pointer;
 }
 
