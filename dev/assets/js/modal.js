@@ -9,14 +9,19 @@ const modalArr = [
         description:'Ви можете обрати будь-який інший будинок із переліку і переглянути варіанти доступних квартир для бронювання',
     },
     {
-        id:'loginSuccess',
-        title:'Вхід успішно виконано',
-        description:'Ви успішно увійшли до системи. Ласкаво просимо!',
+        id:'sold_floor',
+        title:'На поверсі не залишилося квартир',
+        description:'На обраному поверсі не залишилося вільних квартир, але ви можете обрати квартиру із інших доступних поверхів будинку',
     },
     {
-        id:'question',
-        title:'Залишилися питання?',
-        description:'Заповніть форму та напишіть, що саме вас цікавить',
+        id:'sold_flat',
+        title:'Цю квартиру вже купили',
+        description:'Обрана квартира більше не доступна, оберіть, будь ласка, інший варіант',
+    },
+    {
+        id:'success_flat',
+        title:'Сподобалася квартира?',
+        description:'Заповніть форму і ми з вами звʼяжемося',
         markup: `<form>
                     <div class="input_row">
                         <label for="name">Імʼя</label>
@@ -27,7 +32,7 @@ const modalArr = [
                         <input type="text" id="email">
                     </div>
                     <div class="input_row">
-                        <label for="question">Ваше питання</label>
+                        <label for="question">Коментар чи додаткова інформація</label>
                         <textarea type="text" id="question"></textarea>
                     </div>
                 </form>
@@ -35,11 +40,6 @@ const modalArr = [
                     <button type="submit" class="btn" data-modal="close">Готово</button>
                     <button class="btn_close" data-modal="close"></button>
                 </div>`
-    },
-    {
-        id:'error',
-        title:'Щось пішло не так',
-        description:'На жаль, щось пішло не так, спробуйте, будь ласка, пізніше',
     },
 ]
 

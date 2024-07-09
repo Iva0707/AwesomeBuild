@@ -187,6 +187,8 @@ const installFloor =()=> {
                     item.addEventListener('click', () => {
                         window.location.href = 'flat-item.html'
                     })
+                } else {
+                    item.setAttribute('data-trigger-modal', 'sold_flat');
                 }
             })
         })
