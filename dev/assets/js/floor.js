@@ -174,6 +174,7 @@ const installFloor =()=> {
                 flat.querySelector('.flat_status').innerHTML = `Бронь`
             } else if (flat.classList.contains('sold')) {
                 flat.querySelector('.flat_status').innerHTML = `Продано`
+                flat.setAttribute('data-triger-modal', 'sold_flat')
             } else {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
@@ -187,8 +188,6 @@ const installFloor =()=> {
                     item.addEventListener('click', () => {
                         window.location.href = 'flat-item.html'
                     })
-                } else {
-                    item.setAttribute('data-trigger-modal', 'sold_flat');
                 }
             })
         })
