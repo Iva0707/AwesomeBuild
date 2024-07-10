@@ -6,7 +6,7 @@ const flatArr = [
         square: '82,3м²',
         price: '1500$',
         priceTotal: '123,450$',
-        status: 'Бронь',
+        status: 'booked',
     },
     {
         id: 1,
@@ -15,7 +15,7 @@ const flatArr = [
         square: '60,7м²',
         price: '1500$',
         priceTotal: '91,050$',
-        status: 'Продано',
+        status: 'sold',
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const flatArr = [
         square: '60,7м²',
         price: '1500$',
         priceTotal: '91,050$',
-        status: 'Акція',
+        status: 'action',
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const flatArr = [
         square: '82м²',
         price: '1500$',
         priceTotal: '123,000$',
-        status: 'Бронь',
+        status: 'booked',
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const flatArr = [
         square: '79,7м²',
         price: '1500$',
         priceTotal: '119,550$',
-        status: 'Продано',
+        status: 'sold',
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const flatArr = [
         square: '39,2м²',
         price: '1500$',
         priceTotal: '58,800$',
-        status: 'Бронь',
+        status: 'booked',
     },
     {
         id: 6,
@@ -60,7 +60,7 @@ const flatArr = [
         square: '42м²',
         price: '1500$',
         priceTotal: '63,000$',
-        status: 'Продано',
+        status: 'sold',
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ const flatArr = [
         square: '39,2м²',
         price: '1500$',
         priceTotal: '58,800$',
-        status: 'Акція',
+        status: 'action',
     },
     {
         id: 8,
@@ -78,7 +78,7 @@ const flatArr = [
         square: '79,3м²',
         price: '1500$',
         priceTotal: '118,950$',
-        status: 'Вільно',
+        status: 'free',
     },
 ]
 
@@ -135,7 +135,7 @@ const installFloor =()=> {
                 if (flat.classList.contains('active') && !flat.classList.contains('sold')) {
                     window.location.href = 'flat-item.html'
                 }
-                
+
                 removeActiveClass()
 
                 flat.classList.add('active') //По клику добавляем активный класс
@@ -148,7 +148,7 @@ const installFloor =()=> {
 
                 const setFlatStatus =()=> flatArr.find(item => {
                     const thisFlat = flat.getAttribute('data-flat-number')
-                    if (item.flatNumber === Number(thisFlat)) {
+                    if (Number(item.flatNumber) === Number(thisFlat)) {
                         flat.classList.add(item.status)
                     }
                 });
@@ -165,8 +165,17 @@ const installFloor =()=> {
             } else {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
+
+            var flatStatus = document.querySelector('.flat_status')
+            console.log(flatStatus);
+
+
+            var status = flatStatus.innerHTML
+            console.log(status);
+
         })
         
+            
 }
 
 document.querySelector('.page-floor') ? installFloor() : null; //Включаем функцию только для page-floor
