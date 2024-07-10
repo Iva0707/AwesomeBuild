@@ -132,15 +132,10 @@ const installFloor =()=> {
 
         flats.forEach(flat => { //Обращаемся к каждой квартире
             flat.addEventListener('click', () => { //Устанавливаем слушатель событий
-                if (flat.classList.contains('active') && flat.classList.contains('flat_5') && !flat.classList.contains('sold')) {
-                    window.location.href = 'flat_item_test.html'
-                }
-                else if (flat.classList.contains('active') && flat.classList.contains('flat_4') && !flat.classList.contains('sold')) {
+                if (flat.classList.contains('active') && !flat.classList.contains('sold')) {
                     window.location.href = 'flat-item.html'
                 }
-                else if (flat.classList.contains('active') && !flat.classList.contains('sold')) {
-                    window.location.href = 'flat_item_test.html'
-                }
+                
                 removeActiveClass()
 
                 flat.classList.add('active') //По клику добавляем активный класс
