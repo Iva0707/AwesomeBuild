@@ -12,11 +12,18 @@
         left: 0;
         z-index: -1;
     }
-    & .flat{
+    & .flat_svg {
         display: flex;
         justify-content: center;
         & .flat_img {
             height: calc(100vh - 230px);
+            & .flat_item {
+                fill: $fill-green;
+                fill-opacity: 0.1;
+                stroke: $text-color;
+                stroke-width: 4px;
+                cursor: pointer;
+            }
         }
     }
     & .information_container  {
@@ -29,12 +36,3 @@
         }
     }
 }
-
-.flat_item {
-    fill: $fill-green;
-    fill-opacity: 0.1;
-    stroke: $text-color;
-    stroke-width: 4px;
-    cursor: pointer;
-}
-

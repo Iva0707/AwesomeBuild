@@ -1,5 +1,5 @@
 const modal = document.querySelector('.modal')
-const triger = document.querySelectorAll('[data-triger-modal]')
+const trigger = document.querySelectorAll('[data-trigger-modal]')
 const modalBody = document.querySelector('.modal_body')
 
 const modalArr = [
@@ -43,9 +43,9 @@ const modalArr = [
     },
 ]
 
-triger.forEach (item => {
+trigger.forEach (item => {
     item.addEventListener('click', function () {
-        const modalType = item.getAttribute('data-triger-modal')
+        const modalType = item.getAttribute('data-trigger-modal')
         showModal (modalType)
     })
 })

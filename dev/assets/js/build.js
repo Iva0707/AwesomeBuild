@@ -41,7 +41,7 @@ const buildPage =()=> {
             item.addEventListener('click', (event) => {
                 event.preventDefault();
             })
-            item.setAttribute('data-triger-modal', 'sold_floor')
+            item.setAttribute('data-trigger-modal', 'sold_floor')
         }
     });
     
