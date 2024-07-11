@@ -6,7 +6,7 @@ const flatArr = [
         square: '82,3м²',
         price: '1500$',
         priceTotal: '123,450$',
-        status: 'booked',
+        status: 'action',
     },
     {
         id: 1,
@@ -51,7 +51,7 @@ const flatArr = [
         square: '39,2м²',
         price: '1500$',
         priceTotal: '58,800$',
-        status: 'booked',
+        status: 'action',
     },
     {
         id: 6,
@@ -122,7 +122,7 @@ const installFloor =()=> {
                         </div>
                         <div class="floor_option">
                             <div>Статус:</div>
-                            <div>${item.status}</div>
+                            <div class="status_option"></div>
                         </div>`
                 )} //возвращаем информацию и вкладываем в переменную flatInformation
             )
@@ -142,7 +142,7 @@ const installFloor =()=> {
     
                     const thisFlat = flat.getAttribute('data-flat-number') //Получаем айди квартиры по которой был клик
                     const flatNumber = flatArr.filter (item => item.flatNumber === thisFlat)
-
+                    
                     renderInformation(flatNumber) //Вкладываем квартиру по которой был клик в аргумент функции
                 })
 
@@ -157,6 +157,8 @@ const installFloor =()=> {
 
             if (flat.classList.contains('action')) {
                 flat.querySelector('.flat_status').innerHTML = `Акція`
+                flatInfo.classList.add('test')
+                console.log(flatInfo);
             } else if (flat.classList.contains('booked')) {
                 flat.querySelector('.flat_status').innerHTML = `Бронь`
             } else if (flat.classList.contains('sold')) {
@@ -166,13 +168,11 @@ const installFloor =()=> {
                 flat.querySelector('.flat_status').innerHTML = `Вільно`
             } //Добавляем условие смены статуса при наличии определенного класса
 
-            var flatStatus = document.querySelector('.flat_status')
-            console.log(flatStatus);
-
-
-            var status = flatStatus.innerHTML
-            console.log(status);
-
+            if (flatInfo.classList.contains('test')){
+                flatInfo.querySelector('.status_option').innerHTML = `test`
+            } else {
+                flatInfo.querySelector('.status_option').innerHTML = `ddd`
+            }
         })
         
             
