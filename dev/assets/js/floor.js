@@ -3,81 +3,81 @@ const flatArr = [
         id: 0,
         flatNumber: '1',
         rooms: '3',
-        square: '82,3м²',
-        price: '1500$',
-        priceTotal: '123,450$',
+        square: '8.23',
+        price: '1500',
+        priceTotal: '',
         status: 'action',
     },
     {
         id: 1,
         flatNumber: '2',
         rooms: '2',
-        square: '60,7м²',
-        price: '1500$',
-        priceTotal: '91,050$',
+        square: '60.7',
+        price: '1500',
+        priceTotal: '',
         status: 'sold',
     },
     {
         id: 2,
         flatNumber: '3',
         rooms: '2',
-        square: '60,7м²',
-        price: '1500$',
-        priceTotal: '91,050$',
+        square: '60.7',
+        price: '1500',
+        priceTotal: '',
         status: 'action',
     },
     {
         id: 3,
         flatNumber: '4',
         rooms: '3',
-        square: '82м²',
-        price: '1500$',
-        priceTotal: '123,000$',
+        square: '82',
+        price: '1500',
+        priceTotal: '',
         status: 'booked',
     },
     {
         id: 4,
         flatNumber: '5',
         rooms: '3',
-        square: '79,7м²',
-        price: '1500$',
-        priceTotal: '119,550$',
+        square: '79.7',
+        price: '1500',
+        priceTotal: '',
         status: 'sold',
     },
     {
         id: 5,
         flatNumber: '6',
         rooms: '1',
-        square: '39,2м²',
-        price: '1500$',
-        priceTotal: '58,800$',
+        square: '39.2',
+        price: '1500',
+        priceTotal: '',
         status: 'sold',
     },
     {
         id: 6,
         flatNumber: '7',
         rooms: '1',
-        square: '42м²',
-        price: '1500$',
-        priceTotal: '63,000$',
+        square: '42',
+        price: '1500',
+        priceTotal: '',
         status: 'sold',
     },
     {
         id: 7,
         flatNumber: '8',
         rooms: '1',
-        square: '39,2м²',
-        price: '1500$',
-        priceTotal: '58,800$',
+        square: '39.2',
+        price: '1500',
+        priceTotal: '',
         status: 'action',
     },
     {
         id: 8,
         flatNumber: '9',
         rooms: '3',
-        square: '79,3м²',
-        price: '1500$',
-        priceTotal: '118,950$',
+        square: '79.3',
+        price: '1500',
+        priceTotal: '',
         status: 'free',
     },
 ]
@@ -104,6 +104,19 @@ const installFloor =()=> {
                                     item.status === 'sold' ? 'Продано' :
                                      item.status === 'booked' ? 'Бронь' : 'Вільно';
 
+                                     let flatPrice
+                                     if (item.status === 'action') {
+                                         flatPrice = '1375';
+                                     } else {
+                                         flatPrice = '1500';
+                                     }
+
+                const priceTotal = Number(item.square) * Number(flatPrice)
+                const roundedPriceTotal = Number(priceTotal).toLocaleString('de-DE', {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                });                     
+
                 return (`<div class="floor_option">
                             <div>Номер квартири:</div>
                             <div>${item.flatNumber}</div>
@@ -114,15 +127,15 @@ const installFloor =()=> {
                         </div>
                         <div class="floor_option">
                             <div>Площа:</div>
-                            <div>${item.square}</div>
+                            <div>${item.square}м²</div>
                         </div>
                         <div class="floor_option">
                             <div>Ціна за м²</div>
-                            <div>${item.price}</div>
+                            <div>${flatPrice}$</div>
                         </div>
                         <div class="floor_option">
                             <div>Загальна вартість:</div>
-                            <div>${item.priceTotal}</div>
+                            <div>${roundedPriceTotal}$</div>
                         </div>
                         <div class="floor_option">
                             <div>Статус:</div>
