@@ -3,7 +3,7 @@ const flatArr = [
         id: 0,
         flatNumber: '1',
         rooms: '3',
-        square: '8.23',
+        square: '82.3',
         price: '1500',
         priceTotal: '',
         status: 'action',
@@ -24,7 +24,7 @@ const flatArr = [
         square: '60.7',
         price: '1500',
         priceTotal: '',
-        status: 'action',
+        status: 'booked',
     },
     {
         id: 3,
@@ -184,6 +184,21 @@ const installFloor =()=> {
             } //Добавляем условие смены статуса при наличии определенного класса
 
         })
+
+        const trigger = document.querySelector('[trigger]')
+        console.log(trigger);
+
+        // Функция для редиректа с параметром
+        function redirectToFlatItem(flatNumber) {
+            const baseUrl = "http://localhost:3000/flat-item.html";
+            const url = `${baseUrl}?flatNumber=${flatNumber}`;
+            window.location.href = url;
+        }
+
+        trigger.addEventListener('click', function() {
+            redirectToFlatItem(4);
+        })
+        // Вызов функции для редиректа
             
 }
 
