@@ -185,20 +185,20 @@ const installFloor =()=> {
 
         })
 
-        const trigger = document.querySelector('[trigger]')
-        console.log(trigger);
+        const trigger = document.querySelectorAll('[data-flat-trigger]')
 
-        // Функция для редиректа с параметром
         function redirectToFlatItem(flatNumber) {
             const baseUrl = "http://localhost:3000/flat-item.html";
             const url = `${baseUrl}?flatNumber=${flatNumber}`;
             window.location.href = url;
         }
 
-        trigger.addEventListener('click', function() {
-            redirectToFlatItem(4);
+        trigger.forEach (item => {
+            item.addEventListener('click', () => {
+                const triggerNumber = item.getAttribute ('data-flat-trigger')
+                redirectToFlatItem(triggerNumber)
+            })
         })
-        // Вызов функции для редиректа
             
 }
 
