@@ -1,4 +1,4 @@
-let flatArr = [
+window.flatArr = [
     {
         id: 0,
         flatNumber: '1',
@@ -34,7 +34,7 @@ let flatArr = [
         room_2: '16.6',
         price: '1500',
         priceTotal: '',
-        status: 'booked',
+        status: 'sold',
     },
     {
         id: 3,
@@ -82,7 +82,7 @@ let flatArr = [
         room_1: '21.9',
         price: '1500',
         priceTotal: '',
-        status: 'free',
+        status: 'sold',
     },
     {
         id: 7,
@@ -106,7 +106,7 @@ let flatArr = [
         room_3: '12.1',
         price: '1500',
         priceTotal: '',
-        status: 'free',
+        status: 'action',
     },
 ]
 

@@ -102,8 +102,10 @@
 //     },
 // ]
 
-const switchToFlat =()=> {
 
+
+const switchToFlat =()=> {
+    
     const myUrl = new URLSearchParams(window.location.search)
     const flatNumber = myUrl.get('flatNumber')
 
@@ -167,12 +169,6 @@ const switchToFlat =()=> {
             renderInformation(selectedFlat);
         }
     })
-
-
-
-
-
-
 
     }   
 document.querySelector('.page-flat') ? switchToFlat() : null;
