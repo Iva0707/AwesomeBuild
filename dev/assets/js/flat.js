@@ -120,11 +120,6 @@ const switchToFlat =()=> {
     }
     renderContent(flatNumber);
 
-
-
-
-
-
     const flatInfo = document.querySelector('.flat_info')
 
     const renderInformation = (item) => { 
@@ -139,7 +134,7 @@ const switchToFlat =()=> {
             const roundedPriceTotal = Number(priceTotal).toLocaleString('de-DE', {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0
-            });           
+            })          
 
             let flatInformation =  `<li class="list_item">Кількість кімнат: <i>${item.rooms}</i></li>
                     <li class="list_item">Площа: <i>${item.square}м²</i></li>
@@ -166,9 +161,10 @@ const switchToFlat =()=> {
         if (flat.classList.contains('active')) {
             const activeFlat = flat.getAttribute('id')
             const selectedFlat = flatArr.find(item => item.flatNumber == activeFlat)
-            renderInformation(selectedFlat);
+            renderInformation(selectedFlat)
         }
     })
 
-    }   
+    } 
+
 document.querySelector('.page-flat') ? switchToFlat() : null;

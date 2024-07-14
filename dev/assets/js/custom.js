@@ -40,11 +40,3 @@ const calcInformation =()=> buildItem.forEach(item => {
 });
 
 calcInformation()
-
-
-// const showNumber =(a, b, c)=> {  /* создаем аргументы */
-//     console.log('noArgument', c, a, b, c)  /* задаем пордок отображения аргументов */
-// }
-
-// showNumber('arg-a', 'arg-b', 'arg-c')  /* значение для аргументов 1 */
-// showNumber('arg-1', 'arg-2', 'arg-3')  /* значение для аргументов 2 */

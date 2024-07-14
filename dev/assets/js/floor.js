@@ -143,7 +143,7 @@ const installFloor =()=> {
                 const roundedPriceTotal = Number(priceTotal).toLocaleString('de-DE', {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 0
-                });                     
+                })                     
 
                 return (`<div class="floor_option">
                             <div>Номер квартири:</div>
