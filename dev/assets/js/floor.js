@@ -132,12 +132,12 @@ const installFloor =()=> {
                                     item.status === 'sold' ? 'Продано' :
                                      item.status === 'booked' ? 'Бронь' : 'Вільно';
 
-                                     let flatPrice
-                                     if (item.status === 'action') {
-                                         flatPrice = '1375';
-                                     } else {
-                                         flatPrice = '1500';
-                                     }
+                let flatPrice
+                if (item.status === 'action') {
+                    flatPrice = '1375';
+                } else {
+                    flatPrice = '1500';
+                }
 
                 const priceTotal = Number(item.square) * Number(flatPrice)
                 const roundedPriceTotal = Number(priceTotal).toLocaleString('de-DE', {
