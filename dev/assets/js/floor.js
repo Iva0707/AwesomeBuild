@@ -178,14 +178,17 @@ const installFloor =()=> {
         flats.forEach(flat => { //Обращаемся к каждой квартире
             flat.addEventListener('click', () => { //Устанавливаем слушатель событий
 
-                trigger.forEach (item => {
-                    item.addEventListener('click', () => {
-                        const triggerNumber = item.getAttribute ('data-flat-trigger')
-                        
-                        if (!item.classList.contains('sold'))
-                            redirectToFlatItem(triggerNumber)
-                        })
-                })
+
+                const activeFlat = flat.getAttribute('data-flat-number')
+                if (flat.classList.contains('active') && !flat.classList.contains('sold')){ 
+                    redirectToFlatItem(activeFlat)
+                }
+
+                function redirectToFlatItem(flatNumber) {
+                    const baseUrl = "http://localhost:3000/flat-item.html";
+                    const url = `${baseUrl}?flatNumber=${flatNumber}`;
+                    window.location.href = url;
+                }
 
                 removeActiveClass()
 
@@ -219,13 +222,6 @@ const installFloor =()=> {
 
         })
 
-        const trigger = document.querySelectorAll('[data-flat-trigger]')
-
-        function redirectToFlatItem(flatNumber) {
-            const baseUrl = "http://localhost:3000/flat-item.html";
-            const url = `${baseUrl}?flatNumber=${flatNumber}`;
-            window.location.href = url;
-        }
 }
 
 document.querySelector('.page-floor') ? installFloor() : null; //Включаем функцию только для page-floor
