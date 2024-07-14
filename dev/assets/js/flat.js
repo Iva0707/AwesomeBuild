@@ -1,83 +1,184 @@
-// const flatContainer = document.querySelector('.flat_container')
-// const flattrigger = document.querySelectorAll('[data-trigger-flat-page]')
-// const flatBody = document.querySelector('.flat_svg')
 
-// const flatSvgArr = [
-//     {
-//         id:'flat_4',
-//         markup:`<svg class="flat_img" viewBox="0 0 1731 612">
-//                     <image xlink:href="assets/img/flat_4.png"/>
-//                     <path class="flat_item" data-trigger-modal="success_flat" d="M536 322L536.5 106H757.5V61H881V503H758V322H536Z"/>
-//                 </svg>`,
-//     },
-//     {
-//         id: 'flat_5',
-//         markup: `<svg class="flat_img" viewBox="0 0 1731 612">
-//                     <image xlink:href="assets/img/flat_5.png"/>
-//                     <path class="flat_item" data-trigger-modal="success_flat" d="M1195 322L1194.5 106H973.5V61H850V503H973V322H1195Z"/>
-//                 </svg>`
-//     },
-// ]
+const flatPageArr = [
+    {
+        id: 0,
+        roomsQuantity: '3',
+        square: '82.3',
+        kitchen: '14.2',
+        room_1: '16.9',
+        room_2: '12.1',
+        room_3: '18.9',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 1,
+        roomsQuantity: '2',
+        square: '60.7',
+        kitchen: '9.1',
+        room_1: '19.0',
+        room_2: '16.6',
+        room_3: '',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 2,
+        roomsQuantity: '2',
+        square: '60.7',
+        kitchen: '9.1',
+        room_1: '19.0',
+        room_2: '16.6',
+        room_3: '',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 3,
+        roomsQuantity: '3',
+        square: '82.0',
+        kitchen: '14.0',
+        room_1: '19.0',
+        room_2: '16.9',
+        room_3: '12.2',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 4,
+        roomsQuantity: '3',
+        square: '79.7',
+        kitchen: '14.2',
+        room_1: '19.0',
+        room_2: '12.2',
+        room_3: '16.9',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 5,
+        roomsQuantity: '1',
+        square: '39.2',
+        kitchen: '9.1',
+        room_1: '19.0',
+        room_2: '',
+        room_3: '',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 6,
+        roomsQuantity: '1',
+        square: '42.0',
+        kitchen: '9.1',
+        room_1: '21.9',
+        room_2: '',
+        room_3: '',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 7,
+        roomsQuantity: '1',
+        square: '39.2',
+        kitchen: '9.1',
+        room_1: '19.0',
+        room_2: '',
+        room_3: '',
+        price: '1500',
+        totallPrice: '1200',
+    },
+    {
+        id: 8,
+        roomsQuantity: '3',
+        square: '79.3',
+        kitchen: '14.0',
+        room_1: '18.9',
+        room_2: '16.9',
+        room_3: '12.1',
+        price: '1500',
+        totallPrice: '1200',
+    },
+]
 
- // Получаем параметры из URL
- const myUrl = new URLSearchParams(window.location.search);
- const flatNumber = myUrl.get('flatNumber');
- console.log(flatNumber);
+const switchToFlat =()=> {
 
-//  Функция для отображения нужного контента
- function renderContent(flatNumber) {
-     // Скрываем весь контент
-     const contents = document.querySelectorAll('.content');
-     contents.forEach(content => content.classList.remove('active'));
+    const myUrl = new URLSearchParams(window.location.search)
+    const flatNumber = myUrl.get('flatNumber')
 
-     // Отображаем контент в зависимости от flatNumber
-     const selectedContent = document.getElementById(`flat-${flatNumber}`);
-     if (selectedContent) {
-         selectedContent.classList.add('active');
-     } else {
-         // Если flatNumber не соответствует ни одному элементу, можно отобразить сообщение об ошибке или другой контент
-         console.error(`No content found for flat number: ${flatNumber}`);
-     }
- }
+    function renderContent(flatNumber) {
 
-//  function renderContent(flatNumber) {
-//     const content = document.querySelectorAll('.content');
-//     if (flatNumber === 4) {
-//         content.innerHTML = `newHTML-flat-4` 
-//     } else if (flatNumber === 5) {
-//         content.innerHTML = `newHTML-flat5` 
- 
-//     }
-//  }
-
- // Вызываем функцию рендеринга контента
- renderContent(flatNumber);
+       const selectedContent = document.getElementById(`${flatNumber}`)
+       if (selectedContent) {
+           selectedContent.classList.add('active')
+       } else {
+           document.getElementById(`${1}`).classList.add('active')
+       }
+    }
+    renderContent(flatNumber);
 
 
 
 
 
 
-// flattrigger.forEach (item => {
-//     item.addEventListener('click', function () {
-//         const svgType = item.getAttribute('data-trigger-flat-page')
-//         showFlat (svgType)
-//     })
-// })
 
-// function showFlat (svgType) {
-//     const flatData = flatSvgArr.find(item => item.id === svgType)
-//     if (flatData) {
-//         renderFlatContent (flatData)
-//         // window.location.href = 'flat-item.html'
-//         history.pushState({
-//             source: 'web'
-//         }, 'flat-item.html');
-//     }
-// }
 
-// function renderFlatContent (flatData) {
-//     if (flatData.markup) {
-//         flatBody.innerHTML = `${flatData.markup}`
-//     }
-// }
+    const flats = document.querySelectorAll('.flat_content') //Создаем массив с квартирами
+
+    flats.forEach(flat => {
+        
+        if (flat.classList.contains('active')) {
+            const activeFlat = flat.getAttribute('id')
+        }
+    
+    })
+
+
+
+    
+
+    const flatInfo = document.querySelector('.flat_info')
+
+    const renderInformation = (array) => { //Создаем фунцию с аргументом
+        const flatInformation = array.map(item => { //перебираем вложенный аргумент 
+            // const statusText = item.status === 'action' ? 'Акція' :
+            //                     item.status === 'sold' ? 'Продано' :
+            //                      item.status === 'booked' ? 'Бронь' : 'Вільно';
+
+            //                      let flatPrice
+            //                      if (item.status === 'action') {
+            //                          flatPrice = '1375';
+            //                      } else {
+            //                          flatPrice = '1500';
+            //                      }
+
+            // const priceTotal = Number(item.square) * Number(flatPrice)
+            // const roundedPriceTotal = Number(priceTotal).toLocaleString('de-DE', {
+            //     minimumFractionDigits: 0,
+            //     maximumFractionDigits: 0
+            // });           
+
+            return (`<li class="list_item">Кількість кімнат: <i>${item.roomsQuantity}</i></li>
+                    <li class="list_item">Площа: <i>${item.square}м²</i></li>
+                    <li class="list_item">Кухня: <i>${item.kitchen}м²</i></li>
+                    <li class="list_item">Кімната 1: <i>${item.room_1}м²</i></li>
+                    <li class="list_item">Кімната 2: <i>${item.room_2}м²</i></li>
+                    <li class="list_item">Кімната 3: <i>${item.room_3}м²</i></li>
+                    <li class="list_item">Ціна за м²: <i>${item.price}$</i></li>
+                    <li class="list_item">Вартість: <i>${item.totallPrice}$</i></li>`
+            )} //возвращаем информацию и вкладываем в переменную flatInformation
+        )
+        flatInfo.innerHTML = flatInformation //Меняем текст в инфо в разметке
+
+
+    }
+    renderInformation(flatPageArr) //Вкладываем первую квартиру в аргумент функции
+
+
+
+
+
+
+    }   
+document.querySelector('.page-flat') ? switchToFlat() : null;

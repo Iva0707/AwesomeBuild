@@ -12,23 +12,30 @@
         left: 0;
         z-index: -1;
     }
-    & .flat_svg {
-        display: flex;
-        justify-content: center;
-        & .flat_img {
-            height: calc(100vh - 230px);
-            & .flat_item {
-                fill: $fill-green;
-                fill-opacity: 0.1;
-                stroke: $text-color;
-                stroke-width: 4px;
-                cursor: pointer;
+    & .flat_content {
+        display: none;
+        &.active {
+            display: block;
+        }
+        & .flat_svg {
+            display: flex;
+            justify-content: center;
+            & .flat_img {
+                height: calc(100vh - 230px);
+                & .flat_item {
+                    fill: $fill-green;
+                    fill-opacity: 0.1;
+                    stroke: $text-color;
+                    stroke-width: 4px;
+                    cursor: pointer;
+                }
             }
         }
     }
     & .information_container  {
         & .information {
-            & .information_list {
+            & .flat_info {
+            @extend .information_list; 
                 & .list_item {
                     min-width: 152px;
                 }

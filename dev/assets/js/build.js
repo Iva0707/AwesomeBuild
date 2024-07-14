@@ -1,5 +1,3 @@
-
-
 const buildPage =()=> {
     
     const buildPath = document.querySelectorAll('.buid_path')
@@ -48,13 +46,5 @@ const buildPage =()=> {
     calcInformation()
 
 }
-
-
-
-
-
-
-
-
 
 document.querySelector('.page-build') ? buildPage() : null; //Включаем функцию только для page-floor
