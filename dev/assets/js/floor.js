@@ -185,7 +185,7 @@ const installFloor =()=> {
                 }
 
                 function redirectToFlatItem(flatNumber) {
-                    const baseUrl = "http://localhost:3000/flat-item.html";
+                    const baseUrl = "flat-item.html";
                     const url = `${baseUrl}?flatNumber=${flatNumber}`;
                     window.location.href = url;
                 }
