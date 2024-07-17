@@ -2,8 +2,6 @@
 const switchToFlat =()=> {
 
     let flatArr = JSON.parse(localStorage.getItem('flatArr'));
-    console.log(flatArr);
-
     
     const myUrl = new URLSearchParams(window.location.search)
     const flatNumber = myUrl.get('flatNumber')
